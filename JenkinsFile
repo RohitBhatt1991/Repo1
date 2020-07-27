@@ -5,12 +5,8 @@ pipeline{
         stage('Dev Env'){
             steps{
                     bat 'mvn clean compile'
-                }
-			steps{
                     bat 'mvn clean compile'
-                }
-			steps {
-                parallel (
+					parallel (
                     "Cucumber report" : {
                     cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target\\cucumber-reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1, trendsLimit: 10
                     },
@@ -26,12 +22,8 @@ pipeline{
 		stage('test Env'){
             steps{
                     bat 'mvn clean compile'
-                }
-			steps{
                     bat 'mvn clean compile'
-                }
-			steps {
-                parallel (
+					parallel (
                     "Cucumber report" : {
                     cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target\\cucumber-reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1, trendsLimit: 10
                     },
@@ -46,12 +38,8 @@ pipeline{
          stage('stage Env'){
             steps{
                     bat 'mvn clean compile'
-                }
-			steps{
                     bat 'mvn clean compile'
-                }
-			steps {
-                parallel (
+					parallel (
                     "Cucumber report" : {
                     cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target\\cucumber-reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1, trendsLimit: 10
                     },
