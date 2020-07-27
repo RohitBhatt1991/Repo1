@@ -1,0 +1,166 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "SceanrioTest1 |",
+        "description": "",
+        "id": "verify-footer-section;sceanriotest1-|",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 978300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "this is given statement one",
+            "match": {
+              "location": "MyStepdefs.this_is_given_statement_one()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 63100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "this is when one",
+            "match": {
+              "location": "MyStepdefs.this_is_when_one()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "this is then one",
+            "match": {
+              "location": "MyStepdefs.this_is_then_one()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Sanity"
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "SceanrioTest1 |",
+        "description": "",
+        "id": "verify-footer-section;sceanriotest1-|",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 130900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "this is given statement two",
+            "match": {
+              "location": "MyStepdefs.this_is_given_statement_two()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 41700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "this is when two",
+            "match": {
+              "location": "MyStepdefs.this_is_when_two()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "this is then  two",
+            "match": {
+              "location": "MyStepdefs.this_is_then_two()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Sanity"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "SceanrioTest1 |",
+        "description": "",
+        "id": "verify-footer-section;sceanriotest1-|",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 141500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "this is given statement three",
+            "match": {
+              "location": "MyStepdefs.this_is_given_statement_three()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 46300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "this is when three",
+            "match": {
+              "location": "MyStepdefs.this_is_when_three()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 55000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "this is then three",
+            "match": {
+              "location": "MyStepdefs.this_is_then_three()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Verify footer section",
+    "description": "",
+    "id": "verify-footer-section",
+    "keyword": "Feature",
+    "uri": "classpath:featurefiles/mytest.feature",
+    "tags": []
+  }
+]
