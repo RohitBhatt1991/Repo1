@@ -15,12 +15,22 @@ pipeline{
                  
               }
         }
-        stage('deploy stage'){
-              steps{
-                            
-                                    bat 'mvn deploy'
-                         
-                      }
-              }
+        stage('Publish Report') {
+            steps {
+                script {
+                parallel (
+                    "Cucumber report" : {
+                    cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target\\cucumber-reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1, trendsLimit: 10
+                    },
+                    "Junit" : {
+                                        echo "Junit Test skipped"
+                    //junit 'test-output\\junitreports\\*.xml'
+                    }
+                    )
+                    //publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'test-output\\HtmlReport', reportFiles: 'ExtentHtml.html', reportName: 'ExtentReports', reportTitles: ''])
+                }
+            }
+
+        }
     }
 }
