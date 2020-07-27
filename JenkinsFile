@@ -10,16 +10,16 @@ pipeline{
         }
         stage('Testing stage'){
              steps{
-                    withMaven(maven : 'Maven 3.5.3'){
+                   
                             bat 'mvn test'
-                   }
+                 
               }
         }
         stage('deploy stage'){
               steps{
-                            withMaven(maven : 'Maven 3.5.3'){
+                            
                                     bat 'mvn deploy'
-                           }
+                         
                       }
               }
     }
