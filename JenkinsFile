@@ -3,13 +3,13 @@ pipeline{
 
     stages{
         stage('Dev Env'){
-            steps('Compile step'){
+            steps{
                     bat 'mvn clean compile'
                 }
-			steps('Testing step'){
+			steps{
                     bat 'mvn clean compile'
                 }
-			steps('Report step) {
+			steps {
                 parallel (
                     "Cucumber report" : {
                     cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target\\cucumber-reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1, trendsLimit: 10
@@ -24,13 +24,13 @@ pipeline{
             }
         
 		stage('test Env'){
-            steps('Compile step'){
+            steps{
                     bat 'mvn clean compile'
                 }
-			steps('Testing step'){
+			steps{
                     bat 'mvn clean compile'
                 }
-			steps('Report step) {
+			steps {
                 parallel (
                     "Cucumber report" : {
                     cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target\\cucumber-reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1, trendsLimit: 10
@@ -44,13 +44,13 @@ pipeline{
                 }
             }
          stage('stage Env'){
-            steps('Compile step'){
+            steps{
                     bat 'mvn clean compile'
                 }
-			steps('Testing step'){
+			steps{
                     bat 'mvn clean compile'
                 }
-			steps('Report step) {
+			steps {
                 parallel (
                     "Cucumber report" : {
                     cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'target\\cucumber-reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1, trendsLimit: 10
