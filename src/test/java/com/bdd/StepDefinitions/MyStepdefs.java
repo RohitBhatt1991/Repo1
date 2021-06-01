@@ -51,4 +51,11 @@ public class MyStepdefs {
     public void this_is_then_three()  {
         System.out.println("then three");
     }
+
+
+    @Given("^this is given statement three$")
+    public void this_is_given_statement_three_2()  {
+        System.out.println("given three");
+    }
+
 }
