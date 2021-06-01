@@ -55,12 +55,17 @@ public class MyStepdefs {
 
     @Given("^this is given statement three$")
     public void this_is_given_statement_three_2()  {
-        System.out.println("given three");
+        try{
+            int a= 4/0;
+            sop("shilpa");
+        }
+        catch(Exception e){
+            sop("hi");
+        }
 
-        System.out.println("given lkjlkj");
-
-        System.out.println("change done on branch b2");
-
+        catch(ArithematicException e){
+            sop("hello");
+        }
     }
 
 
